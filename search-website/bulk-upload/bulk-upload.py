@@ -17,8 +17,8 @@ from azure.search.documents.indexes.models import (
 )
 
 # Get the service name (short name) and admin API key from the environment
-service_name = 'YOUR-SEARCH-SERVICE-NAME'
-key = 'YOUR-SEARCH-SERVICE-ADMIN-API-KEY'
+service_name = 'servicio-busqueda'
+key = '40410AD301192C5C71231411E593477D'
 endpoint = "https://{}.search.windows.net/".format(service_name)
 
 # Give your index a name
@@ -39,6 +39,7 @@ class CreateClient(object):
         self.index_name = index_name
         self.key = key
         self.credentials = AzureKeyCredential(key)
+        print(self.endpoint)
 
     # Create a SearchClient
     # Use this to upload docs to the Index
